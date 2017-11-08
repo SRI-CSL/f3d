@@ -1,0 +1,12 @@
+To Do list for the f3d (Freedius / CME) suite:
+
+1) Regression tests for core components (f3d-core and f3d-geom, at
+least).
+
+2) Allegro 8.2 and 9.0 do not work.
+
+3) Windows
+
+4) Cocoa
+
+5) SWANK::SEND-TO-EMACS blows up when called from F3D.

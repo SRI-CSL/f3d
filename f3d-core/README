@@ -1,0 +1,61 @@
+The f3d suite: A portable version of SRI's Freedius / CME Image
+Understanding environment.  This is a Lisp-based system that allows
+users to view and manipulate geospatially-organized imagery and
+geometry.  The core system provides representations for images, paged
+(very large) images, and solid geometry situated in a common
+coordinate system.
+
+Explicit sensor models provide a variety of tools for image
+registration and rendering in the presence of distortion and
+unconventional imaging geometries.  These sensor models are supported
+by CLOS-based math and transformation packages.  Transformations are
+represented explicitly in terms of graphs that allow the user to
+describe objects in object-centered coordinate systems that are
+connected to other coordinate systems (e.g. sensor or geospatial).
+
+
+f3d-core: Core transformation and image manipulation
+
+f3d-geom: 2D and 3D object representation and OpenGL foreign function
+interface.
+
+f3d-tk: GUI backend supported by a Tcl/Tk foreign function interface.
+
+
+== Windows ==
+
+If you're on a Windows box, you will need to install the following -
+Looks as if SBCL and Tcl/Tk will have to be 32-bit for now:
+
+    Steel Bank Common Lisp  (Allegro 8.1 will probably work, but not >8.1)
+    MinGW
+    Cmake
+    Tcl/Tk (32-bit version)
+    Quicklisp
+
+Nice to have: Emacs, svn
+
+
+
+Here are the details:
+
+o SBCL (1.1 or greater) - Download Windows binaries from 
+          www.sbcl.org/platform-table.html
+
+o MinGW - download the "latest version" from www.mingw.org.
+
+  - Be sure to install C, C++, and MinGW Developer Toolkit.
+
+  - Also be sure to add the MinGW / MSYS tools to your path, otherwise
+cmake will not work.  F3D assumes "MSYS Makefiles" for cmake builds.
+You are welcome to change this but at your own risk.  The paths to add
+are:
+
+         C:\MinGW\bin;C:\MinGW\MSYS\1.0\bin
+
+o Cmake 2.8 - Download from www.cmake.org.
+
+o Tcl/Tk 8.6 - Download from Activestate.
+
+o Quicklisp - download from quicklisp.org
+

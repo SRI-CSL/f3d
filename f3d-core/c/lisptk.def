@@ -1,0 +1,32 @@
+; i686-pc-mingw32-dlltool --export-all-symbols -z lisptk_build.def -e lisptk_exports.lo lisptk/.libs/lisptk-callbacks.o lisptk/.libs/lisptk.o
+EXPORTS
+	FREEDIUS_C_TCL_ALL_EVENTS @ 1 DATA
+	FREEDIUS_C_TCL_DONT_WAIT @ 2 DATA
+	FREEDIUS_C_TCL_DYNAMIC @ 3 DATA
+	FREEDIUS_C_TCL_ERROR @ 4 DATA
+	FREEDIUS_C_TCL_FILE_EVENTS @ 5 DATA
+	FREEDIUS_C_TCL_GLOBAL_ONLY @ 6 DATA
+	FREEDIUS_C_TCL_IDLE_EVENTS @ 7 DATA
+	FREEDIUS_C_TCL_LINK_BOOLEAN @ 8 DATA
+	FREEDIUS_C_TCL_LINK_DOUBLE @ 9 DATA
+	FREEDIUS_C_TCL_LINK_INT @ 10 DATA
+	FREEDIUS_C_TCL_LINK_STRING @ 11 DATA
+	FREEDIUS_C_TCL_OK @ 12 DATA
+	FREEDIUS_C_TCL_STATIC @ 13 DATA
+	FREEDIUS_C_TCL_TIMER_EVENTS @ 14 DATA
+	FREEDIUS_C_TCL_VOLATILE @ 15 DATA
+	FREEDIUS_C_TCL_WINDOW_EVENTS @ 16 DATA
+	FREEDIUS_Tcl_DoOneEventWithTimeout @ 17
+	FREEDIUS_Tcl_PollEvent @ 18
+	FREEDIUS_Tcl_SetMaxBlockTime @ 19
+	FREEDIUS_delete_tcl_command @ 20
+	FREEDIUS_invoke_tcl_command @ 22
+	FREEDIUS_invoke_tcl_command_arg_ref @ 23
+; SBCL vs. Allegro dependencies.  We appear to need separate .def files for each.  We really need to
+; automate the generation of the .def files...
+;	FREEDIUS_invoke_tcl_command_callback_address
+;	FREEDIUS_delete_tcl_command_callback_address
+        FREEDIUS_delete_tcl_command_callback_index 
+	FREEDIUS_delete_tcl_command_lca 
+	FREEDIUS_invoke_tcl_command_callback_index 
+	FREEDIUS_invoke_tcl_command_lca 

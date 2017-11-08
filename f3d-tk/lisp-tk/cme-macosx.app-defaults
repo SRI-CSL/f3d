@@ -1,0 +1,12 @@
+# This file contains app-defaults for "vanilla" uses of the :TK subsystem.
+# Its location is determined by config.lisp.
+# This file should probably move to $FREEDIUS_ARCH/lisp/lisptk.app-defaults
+
+Qcme.Elt*background: gray70
+Qcme.Elt*Radiobutton.selectColor: grey90
+Qcme.Elt*selectColor: PaleGreen1
+Qcme.doc_widget_frame.doc_widget.background: #fab2be
+Qcme.doc_widget_frame*background: red
+Qcme.doc_widget_frame*doc_widget*font: -family Courier -size 8
+Qcme.Elt*padX: 0
+Qcme.Elt*padY: 0

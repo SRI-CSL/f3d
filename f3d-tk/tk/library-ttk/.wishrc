@@ -1,0 +1,61 @@
+# Special note for Mac OS X: Tcl/Tk for X11 is provided by Fink, and
+# its Tcl libraries normally live in /sw/lib/tcl.  If this is the case
+# for you, then you need to set TCL_LIBRARY to point to /sw/lib/tcl.
+# Also be sure to point TCLLIBPATH at the freedius/tk/library
+# directory.
+
+# LHQ - Jun 5 2003: It is best to set TCL_LIBRARY and TK_LIBRARY in
+# $FREEDIUS/arch/<arch-name>/bin/freedius.  TCLLIBPATH is used during initialization in init.tcl if
+# auto_path is not set.  Since auto_path is set below, TCLLIBPATH is not ever used.
+
+set FCME $env(FREEDIUSTK)
+
+if {[tk windowingsystem] ne "win32"} {
+  set diag_channel stdout
+} else {
+  set diag_channel [open c:/freedius.log w]
+  puts $diag_channel "Opened freedius log."
+}
+
+puts $diag_channel "Defining proc msg (ttk)."
+flush $diag_channel
+
+proc msg {string} {
+  global diag_channel
+  puts $diag_channel $string
+  flush $diag_channel
+}
+
+set libver -ttk
+
+msg "Loading $FCME/tk/library$libver/.wishrc"
+# This appears to be necessary under Windows - Need to explicitly load the pkgIndex
+set dir $FCME/tk/library$libver/
+source "$FCME/tk/library$libver/pkgIndex.tcl"
+
+if {0} {
+set auto_path [concat [list $FCME/tk/library \
+                        [file join $env(FREEDIUS_EXEC_PREFIX) lib]]\
+			  $auto_path]
+}
+
+set auto_path [concat $FCME/tk/library$libver $auto_path]
+set auto_path [concat /usr/local/lib $auto_path]
+
+
+msg "auto_path: $auto_path"
+
+msg "package require qtk"
+package require qtk
+msg "fix_key_bindings"
+fix_key_bindings
+#tk_focusFollowsMouse
+
+
+if [file exists [file join $env(HOME) .wishrc]] {
+  puts "loading [file join $env(HOME) .wishrc]"	
+  source [file join $env(HOME) .wishrc]
+}
+msg "auto_path: $auto_path"
+
+msg "Done Loading $FCME/tk/library$libver/.wishrc"

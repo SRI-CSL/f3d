@@ -1,0 +1,29 @@
+# use x
+
+# Use the default font unless one of the next is enabled
+#Qcme.Obj*font: -family Courier -size 8
+#Qcme.Obj*font: -family Courier -size 10
+
+#Qcme.Obj*background: gray70
+Qcme.Obj*background: #accaae
+#Qcme.Obj*selectColor: grey55
+Qcme.Obj*Radiobutton.selectColor: grey90
+#Qcme.Obj*Checkbutton.selectColor: grey90
+#Qcme.Obj*selectColor: PaleGreen1
+Qcme.Obj*selectColor: #d4d466
+#Qcme.Obj*selectColor: grey60
+Qcme.Obj*borderWidth: 2
+#Qcme.Obj*highlightThickness: 0
+Qcme.Obj*Entry.highlightThickness: 0
+Qcme.Obj*Text.highlightThickness: 0
+Qcme.Obj*Button.highlightThickness: 0
+Qcme.Obj*Checkbutton.highlightThickness: 0
+Qcme.Obj*Menubutton.highlightThickness: 0
+Qcme.Obj*Radiobutton.highlightThickness: 0
+Qcme.Obj*Listbox.highlightThickness: 0
+Qcme.Obj*Scrollbar.troughColor: gray70
+Qcme.Obj*padX: 2
+Qcme.Obj*padY: 2
+Qcme.Obj*Frame.borderWidth: 0
+Qcme.Obj*Frame.padY: 0
+#Qcme.Obj.borderWidth: 2

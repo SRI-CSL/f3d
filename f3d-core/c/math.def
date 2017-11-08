@@ -1,0 +1,21 @@
+; i686-pc-mingw32-dlltool --export-all-symbols -z math.def ../arch/linux-cmucl/lib/libf3dmath.so
+EXPORTS
+	math_add_matrices @ 23
+	math_gammln @ 24
+	math_invert @ 25
+	math_invert_3x3_matrix @ 26
+	math_invert_double_matrix @ 27
+	math_invert_homogeneous_4x4_matrix @ 28
+	math_invert_matrix @ 29
+	math_lubksb @ 30
+	math_ludcmp @ 31
+	math_matrix_times_vector @ 32
+	math_multiply_matrices @ 33
+	math_multiply_matrices_transposed1 @ 34
+	math_multiply_matrices_transposed2 @ 35
+	math_multiply_matrices_v2 @ 36
+	math_svbksb @ 37
+	math_svdcmp @ 38
+	math_tqli @ 39
+	math_transpose_matrix @ 40
+	math_tred2 @ 41

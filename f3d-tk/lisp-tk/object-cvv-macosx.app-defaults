@@ -1,0 +1,23 @@
+Qcme.Obj*background: #accaae
+Qcme.Obj*Radiobutton.selectColor: grey90
+Qcme.Obj*selectColor: #d4d466
+Qcme.Obj*Scrollbar.troughColor: gray70
+
+# Qcme.Obj*padXY causes problems with text in Mac OS X native buttons
+#Qcme.Obj*padX: 2
+#Qcme.Obj*padY: 2
+#Qcme.Obj*Button.padX: 6
+#Qcme.Obj*Button.padY: 6
+
+Qcme.Obj*font: -family Courier -size 10
+Qcme.Obj*RadioButton.padX: 4
+Qcme.Obj*RadioButton.padY: 4
+
+# Checkbutton.padXY needed for button text space
+Qcme.Obj*Checkbutton.padX: 4
+Qcme.Obj*Checkbutton.padY: 4
+
+#Qcme.Obj*Checkbutton.borderWidth: 0
+Qcme.Obj*Radiobutton.highlightThickness: 0
+Qcme.Obj*Frame.borderWidth: 0
+Qcme.Obj*Frame.padY: 0

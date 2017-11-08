@@ -1,0 +1,211 @@
+; i686-pc-mingw32-dlltool --export-all-symbols -z freedius.def libfreedius.so
+EXPORTS
+	FREEDIUS_C_COMPRESSION_CCITTFAX3 @ 1 DATA
+	FREEDIUS_C_COMPRESSION_CCITTFAX4 @ 2 DATA
+	FREEDIUS_C_COMPRESSION_CCITTRLE @ 3 DATA
+	FREEDIUS_C_COMPRESSION_DCS @ 4 DATA
+	FREEDIUS_C_COMPRESSION_DEFLATE @ 5 DATA
+	FREEDIUS_C_COMPRESSION_JBIG @ 6 DATA
+	FREEDIUS_C_COMPRESSION_JPEG @ 7 DATA
+	FREEDIUS_C_COMPRESSION_LZW @ 8 DATA
+	FREEDIUS_C_COMPRESSION_NONE @ 9 DATA
+	FREEDIUS_C_COMPRESSION_OJPEG @ 10 DATA
+	FREEDIUS_C_COMPRESSION_PACKBITS @ 11 DATA
+	FREEDIUS_C_JPEGCOLORMODE_RAW @ 12 DATA
+	FREEDIUS_C_JPEGCOLORMODE_RGB @ 13 DATA
+	FREEDIUS_C_ORIENTATION_BOTLEFT @ 14 DATA
+	FREEDIUS_C_ORIENTATION_BOTRIGHT @ 15 DATA
+	FREEDIUS_C_ORIENTATION_LEFTBOT @ 16 DATA
+	FREEDIUS_C_ORIENTATION_LEFTTOP @ 17 DATA
+	FREEDIUS_C_ORIENTATION_RIGHTBOT @ 18 DATA
+	FREEDIUS_C_ORIENTATION_RIGHTTOP @ 19 DATA
+	FREEDIUS_C_ORIENTATION_TOPLEFT @ 20 DATA
+	FREEDIUS_C_ORIENTATION_TOPRIGHT @ 21 DATA
+	FREEDIUS_C_PHOTOMETRIC_CIELAB @ 22 DATA
+	FREEDIUS_C_PHOTOMETRIC_MASK @ 23 DATA
+	FREEDIUS_C_PHOTOMETRIC_MINISBLACK @ 24 DATA
+	FREEDIUS_C_PHOTOMETRIC_MINISWHITE @ 25 DATA
+	FREEDIUS_C_PHOTOMETRIC_PALETTE @ 26 DATA
+	FREEDIUS_C_PHOTOMETRIC_RGB @ 27 DATA
+	FREEDIUS_C_PHOTOMETRIC_SEPARATED @ 28 DATA
+	FREEDIUS_C_PHOTOMETRIC_YCBCR @ 29 DATA
+	FREEDIUS_C_PLANARCONFIG_CONTIG @ 30 DATA
+	FREEDIUS_C_PLANARCONFIG_SEPARATE @ 31 DATA
+	FREEDIUS_C_SAMPLEFORMAT_IEEEFP @ 32 DATA
+	FREEDIUS_C_SAMPLEFORMAT_INT @ 33 DATA
+	FREEDIUS_C_SAMPLEFORMAT_UINT @ 34 DATA
+	FREEDIUS_C_SAMPLEFORMAT_VOID @ 35 DATA
+	FREEDIUS_C_TIFFTAG_ARTIST @ 36 DATA
+	FREEDIUS_C_TIFFTAG_BITSPERSAMPLE @ 37 DATA
+	FREEDIUS_C_TIFFTAG_COMPRESSION @ 38 DATA
+	FREEDIUS_C_TIFFTAG_DATETIME @ 39 DATA
+	FREEDIUS_C_TIFFTAG_DOCUMENTNAME @ 40 DATA
+	FREEDIUS_C_TIFFTAG_HOSTCOMPUTER @ 41 DATA
+	FREEDIUS_C_TIFFTAG_IMAGEDESCRIPTION @ 42 DATA
+	FREEDIUS_C_TIFFTAG_IMAGELENGTH @ 43 DATA
+	FREEDIUS_C_TIFFTAG_IMAGEWIDTH @ 44 DATA
+	FREEDIUS_C_TIFFTAG_INKNAMES @ 45 DATA
+	FREEDIUS_C_TIFFTAG_JPEGCOLORMODE @ 46 DATA
+	FREEDIUS_C_TIFFTAG_JPEGQUALITY @ 47 DATA
+	FREEDIUS_C_TIFFTAG_MAKE @ 48 DATA
+	FREEDIUS_C_TIFFTAG_MODEL @ 49 DATA
+	FREEDIUS_C_TIFFTAG_ORIENTATION @ 50 DATA
+	FREEDIUS_C_TIFFTAG_PAGENAME @ 51 DATA
+	FREEDIUS_C_TIFFTAG_PHOTOMETRIC @ 52 DATA
+	FREEDIUS_C_TIFFTAG_PLANARCONFIG @ 53 DATA
+	FREEDIUS_C_TIFFTAG_REFERENCEBLACKWHITE @ 54 DATA
+	FREEDIUS_C_TIFFTAG_ROWSPERSTRIP @ 55 DATA
+	FREEDIUS_C_TIFFTAG_SAMPLEFORMAT @ 56 DATA
+	FREEDIUS_C_TIFFTAG_SAMPLESPERPIXEL @ 57 DATA
+	FREEDIUS_C_TIFFTAG_SOFTWARE @ 58 DATA
+	FREEDIUS_C_TIFFTAG_TARGETPRINTER @ 59 DATA
+	FREEDIUS_C_TIFFTAG_TILELENGTH @ 60 DATA
+	FREEDIUS_C_TIFFTAG_TILEOFFSETS @ 61 DATA
+	FREEDIUS_C_TIFFTAG_TILEWIDTH @ 62 DATA
+	FREEDIUS_C_TIFFTAG_YCBCRSUBSAMPLING @ 63 DATA
+	FREEDIUS_add_to_working_set @ 64
+	FREEDIUS_all_image_page_pool_stats @ 65
+	FREEDIUS_aref_T_aref_8 @ 66
+	FREEDIUS_array_address @ 67
+	FREEDIUS_array_image_array @ 68
+	FREEDIUS_array_image_size_limit @ 69
+	FREEDIUS_brk @ 70
+	FREEDIUS_diref @ 71
+	FREEDIUS_diset @ 72
+	FREEDIUS_fast_gauss_convolve @ 73
+	FREEDIUS_file_image_header_params @ 74
+	FREEDIUS_file_image_page_filepos @ 75
+	FREEDIUS_fixnum_aref_T @ 76
+	FREEDIUS_free @ 77
+	FREEDIUS_freedius_so_init @ 78
+	FREEDIUS_galloc @ 79
+	FREEDIUS_gauss_convolve_decimate @ 80
+	FREEDIUS_get_page_pool @ 81
+	FREEDIUS_get_tif @ 82
+	FREEDIUS_get_tileaddr @ 83
+	FREEDIUS_image_block_size @ 84
+	FREEDIUS_image_blocks_hi @ 85
+	FREEDIUS_image_blocks_wide @ 86
+	FREEDIUS_image_class_code @ 87
+	FREEDIUS_image_element_size @ 88
+	FREEDIUS_image_element_type @ 89
+	FREEDIUS_image_filter_decimate2 @ 90
+	FREEDIUS_image_get_rectangle @ 91
+	FREEDIUS_image_get_rectangle_bordered @ 92
+	FREEDIUS_image_getcolumn @ 93
+	FREEDIUS_image_getline @ 94
+	FREEDIUS_image_page_pool_stats @ 95
+	FREEDIUS_image_put_rectangle @ 96
+	FREEDIUS_image_putcolumn @ 97
+	FREEDIUS_image_putline @ 98
+	FREEDIUS_image_set_dynamic_range @ 99
+	FREEDIUS_image_xdim @ 100
+	FREEDIUS_image_ydim @ 101
+	FREEDIUS_interpolate_iref @ 102
+	FREEDIUS_iref @ 103
+	FREEDIUS_iset @ 104
+	FREEDIUS_iu_testbed_image_file_header_params @ 105
+	FREEDIUS_lazy_retile_image @ 107
+	FREEDIUS_lisp_error_callback @ 108
+	FREEDIUS_lisp_make_array_image @ 110
+	FREEDIUS_load_image @ 111
+	FREEDIUS_machine_endian @ 112
+	FREEDIUS_make_array_image @ 113
+	FREEDIUS_make_file_image @ 115
+	FREEDIUS_make_image @ 116
+	FREEDIUS_make_image_blocked @ 117
+	FREEDIUS_make_image_from_jpeg_buffer @ 119
+	FREEDIUS_make_image_page_queue_entry_arrays @ 120
+	FREEDIUS_make_lisp_array_image @ 122
+	FREEDIUS_make_lisp_lazy_image @ 124
+	FREEDIUS_make_lisp_page_handler_block_map @ 125
+	FREEDIUS_make_lisp_paged_image @ 127
+	FREEDIUS_make_tiff_file_image @ 129
+	FREEDIUS_make_tiff_lazy_image @ 130
+	FREEDIUS_map_array_image @ 131
+	FREEDIUS_map_paged_image @ 132
+	FREEDIUS_paged_image_iref_fault @ 133
+	FREEDIUS_paged_image_iset_fault @ 134
+	FREEDIUS_paged_image_read_only @ 135
+	FREEDIUS_read_image_header @ 136
+	FREEDIUS_read_property_list_string @ 137
+	FREEDIUS_recognize_image_header @ 138
+	FREEDIUS_release_image_pages @ 139
+	FREEDIUS_reload_image @ 140
+	FREEDIUS_remove_from_working_set @ 141
+	FREEDIUS_resize_image_page_pool @ 142
+	FREEDIUS_rgb8_to_yuv_images @ 143
+	FREEDIUS_save_image @ 144
+	FREEDIUS_save_iu_testbed_image @ 145
+	FREEDIUS_save_jpeg_image @ 146
+	FREEDIUS_save_tiff_image @ 147
+	FREEDIUS_save_untiled_tiff_image @ 148
+	FREEDIUS_setLispErrorHandlers @ 149
+	FREEDIUS_set_ab_gains @ 150
+	FREEDIUS_set_array_image_arrays @ 151
+	FREEDIUS_set_default_file_image_directory @ 152
+	FREEDIUS_set_file_image_default_format @ 153
+	FREEDIUS_set_image_page_queue_entry_arrays @ 154
+	FREEDIUS_set_lisp_array_header_offset @ 155
+	FREEDIUS_set_page_handler_block_map @ 156
+	FREEDIUS_set_paged_image_arrays @ 157
+	FREEDIUS_set_paged_image_tile_offset_bits @ 158
+	FREEDIUS_set_qcmebindir_path @ 159
+	FREEDIUS_set_save_image_default_format @ 160
+	FREEDIUS_set_write_trace_debug_level @ 161
+	FREEDIUS_swap_endian_16 @ 162
+	FREEDIUS_swap_endian_32 @ 163
+	FREEDIUS_swap_endian_double_float @ 164
+	FREEDIUS_swap_endian_single_float @ 165
+	FREEDIUS_test_page_maps @ 166
+	FREEDIUS_tiff_file_header_params @ 167
+	FREEDIUS_unmake_image_page_queue_entry_arrays @ 168
+	FREEDIUS_update_array_image_arrays @ 170
+	FREEDIUS_update_paged_image_arrays @ 171
+	FREEDIUS_zalloc @ 172
+	TIFFGetField_float_array @ 173
+	TIFFGetField_uint16_array @ 174
+	TIFFGetField_uint32_array @ 175
+	TIFFReadColormap @ 176
+	array_copy_u16_to_u32 @ 1417
+	array_copy_u32_to_u16 @ 1418
+	array_copy_u32_to_u8 @ 1419
+	array_copy_u8_to_u32 @ 1420
+	cmkfile @ 1421
+	copy_file @ 1422
+	day_millisecond_time @ 1423
+	expand_pathname @ 1424
+	fd_seek @ 1425
+	fr_nanosleep @ 1426
+	fullread @ 1427
+	fullwrite @ 1428
+	galloc_sanity_check @ 1429
+	mkfile @ 1430
+	run_program @ 1431
+	run_program_wait @ 1432
+	tiffgetfield_string @ 1433
+	xxcounter_value @ 1434
+	?warning@FREEDIUS@@YAXPBDZZ @ 1435
+;	FREEDIUS_lisp_error_callback_callback_address 
+;	FREEDIUS_make_lisp_paged_image_callback_address
+;	FREEDIUS_make_lisp_page_handler_block_map_callback_address
+	FREEDIUS_make_lisp_page_handler_block_map_callback_index 
+	FREEDIUS_make_lisp_page_handler_block_map_lca 
+;	FREEDIUS_unmake_image_page_queue_entry_arrays_callback_address
+	FREEDIUS_unmake_image_page_queue_entry_arrays_callback_index 
+	FREEDIUS_unmake_image_page_queue_entry_arrays_lca 
+;	FREEDIUS_make_image_page_queue_entry_arrays_callback_address
+	FREEDIUS_make_image_page_queue_entry_arrays_callback_index 
+	FREEDIUS_make_image_page_queue_entry_arrays_lca 
+	FREEDIUS_make_lisp_paged_image_callback_index 
+	FREEDIUS_make_lisp_paged_image_lca 
+;	FREEDIUS_make_array_image_callback_callback_address
+	FREEDIUS_make_array_image_callback_callback_index 
+	FREEDIUS_make_array_image_callback_lca 
+;	FREEDIUS_make_image_callback_callback_address
+	FREEDIUS_make_image_callback_callback_index 
+	FREEDIUS_make_image_callback_lca 
+	FREEDIUS_lisp_error_callback_callback_index 
+	FREEDIUS_lisp_error_callback_lca 
+	FREEDIUS_make_jpeg_buffer_from_image
+	FREEDIUS_make_image_from_jpeg_buffer

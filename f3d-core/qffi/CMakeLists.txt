@@ -1,0 +1,56 @@
+cmake_minimum_required(VERSION 2.8)
+
+#if( WIN32 )
+#set(libname libf3d-foreign-vector)
+#else ( WIN32 )
+set(libname f3d-foreign-vector)
+#endif ( WIN32 )
+
+project(${libname})
+
+include("../f3d-cmake-setup.cmake")
+
+include_directories(../c/include ${INSTALL_PREFIX}/c)
+
+if(LISP STREQUAL "sbcl64")
+	SET(FOREIGN_VECTOR sbcl64-foreign-vector.c++ )
+elseif(LISP STREQUAL "sbcl32")
+	SET(FOREIGN_VECTOR cmucl-foreign-vector.c++ )
+elseif(LISP STREQUAL "cmucl")
+	SET(FOREIGN_VECTOR cmucl-foreign-vector.c++ )
+endif(LISP STREQUAL "sbcl64")
+
+if(DEFINED FOREIGN_VECTOR)
+
+add_library(${libname} SHARED ${FOREIGN_VECTOR})
+
+if(APPLE)
+target_link_flags(${libname} "-Wall -flat_namespace -undefined warning")
+else(APPLE)
+if(WIN32)
+#  set(QFFI_DEF "$ENV{FREEDIUS}\\c\\qffi.def")
+  set(QFFI_DEF "${CMAKE_CURRENT_SOURCE_DIR}/qffi.def")
+  FILE(TO_CMAKE_PATH ${QFFI_DEF} QFFI_DEF_CMAKE)
+  message("** Exporting symbols from  ${QFFI_DEF_CMAKE}")
+  if (MINGW)
+    target_link_flags(${libname} "-Wl,--export-all-symbols")
+  else (MINGW)
+    target_link_flags(${libname} "/DEF:\"${QFFI_DEF_CMAKE}\"")
+  endif (MINGW)
+  message("** Library install dir = ${LIBRARY_INSTALL_DIR}")
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${libname}.dll DESTINATION ${LIBRARY_INSTALL_DIR})
+#  target_link_libraries(${libname} "${LIBRARY_INSTALL_DIR}/libfreedius.lib")
+  target_link_libraries(${libname} "${CMAKE_CURRENT_BINARY_DIR}/../../c/build/libfreedius.dll")
+else(WIN32)
+  target_link_flags(${libname} "-Wall")
+endif(WIN32)
+endif(APPLE)
+
+if(WIN32)
+#  install(TARGETS ${libname} LIBRARY ARCHIVE DESTINATION ${LIBRARY_INSTALL_DIR})
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${libname}.dll DESTINATION ${LIBRARY_INSTALL_DIR} RENAME lib${libname}.dll)
+else(WIN32)
+  install(TARGETS ${libname} LIBRARY DESTINATION ${LIBRARY_INSTALL_DIR})
+endif(WIN32)
+
+endif(DEFINED FOREIGN_VECTOR)

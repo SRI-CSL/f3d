@@ -1,0 +1,67 @@
+#+lispglut (defun glutInit (&rest ignore) nil)
+
+;;;
+#+lispglut
+(defun glutBitmapCharacter (font-id character)
+  (let ((font (get-font-by-id font-id))
+	(code (if (characterp character) (char-code character) character)))
+    (when (and font (<= 1 code 255))
+      (unwind-protect
+	   (destructuring-bind (char-width . char-bitmap)
+	       (aref (font-character font) code)
+	     (glPushClientAttrib  GL_CLIENT_PIXEL_STORE_BIT )
+	     (glPixelStorei GL_UNPACK_SWAP_BYTES  GL_FALSE )
+	     (glPixelStorei GL_UNPACK_LSB_FIRST   GL_FALSE )
+	     (glPixelStorei GL_UNPACK_ROW_LENGTH  0        )
+	     (glPixelStorei GL_UNPACK_SKIP_ROWS   0        )
+	     (glPixelStorei GL_UNPACK_SKIP_PIXELS 0        )
+	     (glPixelStorei GL_UNPACK_ALIGNMENT   1        )
+	     (glBitmap char-width (font-height font)
+		       (coerce (font-xorig font) 'single-float)
+                       (coerce (font-yorig font) 'single-float)
+		       (coerce char-width 'single-float) 0.0s0
+		       char-bitmap))
+	(glPopClientAttrib))
+      )))
+
+;;;
+;;; Each entry in the character map is a cons pair (width . glyph), so
+;;; the car is the width:
+;;;
+#+lispglut
+(defun glutBitmapWidth(font-id char-code)
+  (let ((font (get-font-by-id font-id)))
+    (and (<= 0 char-code (font-quantity font))
+         (car (aref (font-characters font) char-code))
+         )))
+
+#+lispglut
+(defun glutBitmapLength (font-id string)
+  ;; Return the pixel "length" of the string, taking newlines into
+  ;; account:
+  (let* ((font (get-font-by-id font-id))
+         (max (font-quantity font))
+         (font-chars (font-characters font))
+         (this-line-length 0)
+         (length 0))
+    (declare (fixnum this-line-length length))
+    (flet ((font-char-width (code)
+             (and (<= 0 code max) (aref font-chars code))))
+      (and font
+           (loop for char across string
+                 for w fixnum = (font-char-width (char-code char))
+                 do (if (char/= char #\newline)
+                        (incf this-line-length w)
+                        (progn
+                          (when (< length this-line-length)
+                            (setf length this-line-length))
+                          (setf this-line-length 0)))
+                    finally (return (max length this-line-length)))))))
+
+#+lispglut (defun glutfont-p (thing) (typep thing 'glut-font))
+
+
+#+lispglut
+(defun-cached get-glut-font (&key (family "Helvetica") (size 12) font error-ok stroke-p)
+  (get-font-by-id (list family size)))
+

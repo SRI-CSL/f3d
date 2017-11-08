@@ -1,0 +1,8 @@
+f3d-tk
+
+This is the Tcl/Tk "backend" to Freedius/CME, relying on f3d-core
+(images and transformations) and f3d-geom (objects and OpenGL).
+
+#+glx  -   OpenGL and X11
+#+cocoa -  MacOSX native windows (Cocoa API)
+#+wgl  -   Windows native windows

@@ -1,0 +1,71 @@
+Instructions for using SLIME with FREEDIUS.
+
+DOWNLOAD AND INSTALL SLIME AS FOLLOWS:
+
+Create a directory for slime, such as:
+
+mkdir -p ~/downloads/slime/slime-cvs
+cvs -d :pserver:anonymous@common-lisp.net:/project/slime/cvsroot login
+anonymous
+cvs -d :pserver:anonymous@common-lisp.net:/project/slime/cvsroot co slime
+
+To update from the SLIME cvs repository:
+
+cd ~/downloads/slime/slime-cvs
+cd slime-cvs
+cvs -d :pserver:anonymous@common-lisp.net:/project/slime/cvsroot login
+anonymous
+cvs update -d .
+
+______________________________________________________
+
+
+CONFIGURE various FREEDIUS-SLIME parameters (in your EMACS init file, or elsewhere
+that gets loaded by EMACS).
+
+(defvar *default-slime-load-path* "/m/rom1/downloads/slime/slime")
+
+;;; Set this to t to call (CL-USER::LOAD-CME) when slime-run-freedius is called.
+(defvar *freedius-auto-load* t) 
+
+;;; Configure these as needed for your situation  -- this needs to be rethought.
+;;; Perhaps you should just add your own emacs commands that call SLIME-RUN-FREEDIUS
+;;; that have the needed configuration paramreters built into them.
+;;; See the file $FREEDIUS/emacs/freedius-slime.el
+
+(defvar *default-freedius-cmucl-arch-name* "linux-cmucl-redhat-9")
+(defvar *default-cmucl-executable* "cmucl")
+(defvar *default-freedius-allegro-arch-name* "linux-acl")
+(defvar *default-allegro-executable* "allegro")
+
+In you EMACS init file add:
+
+(add-to-list 'load-path (concat (getenv "FREEDIUS") "/emacs"))
+(require 'slime-hacks)
+(require 'freedius-slime)
+
+
+WINDOWS USERS: You should specify the full pathname for Allegro, and
+you will need to force-feed Allegro the file that contains the SLIME
+port.  Place this (edited to reflect the location of alisp8.exe on
+your machine) in your Emacs init file:
+
+(setq *default-allegro-executable*
+  (concat "c:/Progra~1/acl80/alisp8.exe -e '(setq *swank-file* %22" (slime-swank-port-file) "%22)'"))
+
+
+
+FREEDIUS STARTUP with ALLEGRO:
+
+The FREEDIUS autoload hack doesn't work right with Allegro.  The SLIME repl
+becomes broken.  The problem is something to do with the use of multi-processing
+by SLIME under Allegro.
+
+For Allegro, run f3dacl in Emacs, then in the *inferior-lisp* buffer evaluate
+(load-cme).  Everything appears to be just dandy.  The slime-repl buffer should
+behave correctly. 
+
+CAUTION: Beware that with the use of multi-processing, if the FREEDIUS GUI is
+doing something and you cause Lisp to evaluate things from either a Lisp-mode
+buffer or slime-repl, there is the potential for inconistent behavior.  This is
+because nothing in FREEDIUS is thread safe.  

@@ -1,0 +1,13 @@
+Wed Jan  9 2002
+
+Unfinished, or obsolete files in this directory:
+
+clip-planes.lisp                  experimental file - future unknown
+
+polygon-intersection.lisp         experimental file - future unknown
+
+popup-menus.lisp                  code fragments for popup-menus
+
+screen.lisp			  beginnings for screen object to agregate info specific to screens
+
+terrain.lisp                      This code actually functioned (long ago). Probably can be revived. 

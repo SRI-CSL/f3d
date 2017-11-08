@@ -1,0 +1,7 @@
+EXPORTS
+	FREEDIUS_make_lisp_simple_vector @ 1 DATA
+	FREEDIUS_make_integer_simple_vector @ 2 DATA
+	FREEDIUS_make_single_float_simple_vector @ 3 DATA
+	FREEDIUS_make_double_float_simple_vector @ 4 DATA
+	FREEDIUS_simple_vector_typecode @ 5 DATA
+	FREEDIUS_unmake_simple_vector @ 6 DATA

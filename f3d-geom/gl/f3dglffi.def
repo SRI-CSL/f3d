@@ -1,0 +1,47 @@
+; i686-pc-mingw32-dlltool --export-all-symbols -z f3dglffi.def libf3dglffi.so
+EXPORTS
+	FREEDIUS_C_GLU_FILL @ 1 DATA
+	FREEDIUS_C_GLU_FLAT @ 2 DATA
+	FREEDIUS_C_GLU_INSIDE @ 3 DATA
+	FREEDIUS_C_GLU_LINE @ 4 DATA
+	FREEDIUS_C_GLU_NONE @ 5 DATA
+	FREEDIUS_C_GLU_OUTSIDE @ 6 DATA
+	FREEDIUS_C_GLU_POINT @ 7 DATA
+	FREEDIUS_C_GLU_SILHOUETTE @ 8 DATA
+	FREEDIUS_C_GLU_SMOOTH @ 9 DATA
+	FREEDIUS_compute_ribbon_edge_vertices @ 12
+	FREEDIUS_compute_ribbon_face_vertex @ 13
+	FREEDIUS_draw_line_strip @ 14
+	FREEDIUS_draw_polygon @ 15
+	FREEDIUS_draw_polygon_tesselated @ 16
+	FREEDIUS_glClearAccum @ 17
+	FREEDIUS_glClearColor @ 18
+	FREEDIUS_glClearColor4dv @ 19
+	FREEDIUS_glClearIndex @ 20
+	FREEDIUS_glDrawPixels_offset @ 21
+	FREEDIUS_glDrawquad_strip @ 22
+	FREEDIUS_glDrawquad_strip_indexed @ 23
+	FREEDIUS_glDrawquad_strip_indexed_with_face_normals @ 24
+	FREEDIUS_glDrawquad_strip_indexed_with_vertex_normals @ 25
+	FREEDIUS_glDrawquad_strip_with_face_normals @ 26
+	FREEDIUS_glDrawquad_strip_with_vertex_normals @ 27
+	FREEDIUS_glLineWidth @ 28
+	FREEDIUS_glMultMatrixd_transposed @ 29
+	FREEDIUS_glPixelZoom @ 30
+	FREEDIUS_glPointSize @ 31
+	FREEDIUS_glPolygonOffset @ 32
+	FREEDIUS_glTexImage2D_offset @ 33
+	FREEDIUS_gluProject_to_window @ 35
+	FREEDIUS_gluProject_to_world @ 36
+	FREEDIUS_handle_gl_errors @ 37
+	FREEDIUS_set_2d_to_ndc_matrix @ 38
+	FREEDIUS_set_transfer_scale_bias @ 39
+	FREEDIUS_transpose_4x4_double @ 41
+	FREEDIUS_window_to_ndc_matrix @ 44
+	FREEDIUS_GetDC @ 45
+	FREEDIUS_GetDCEx @ 46
+	FREEDIUS_GetDCExError @ 47
+	make_wglRenderingSpec @ 48
+	FREEDIUS_chooseAndSetPixelformat @ 49
+	FREEDIUS_GetPixelFormat @ 50
+	FREEDIUS_CreateContextFromID @ 51

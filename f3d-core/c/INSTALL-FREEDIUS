@@ -1,0 +1,82 @@
+LISP ENVIRONMENTS:
+
+CMU Common Lisp version 18c or newer
+
+   Available from www.cons.org/cmucl
+
+   SVN source tree from CMUCL can be obtained as follows:
+
+     svn checkout https://svn.ai.sri.com/projects/freedius .
+
+   CMUCL runs on Linux, Solaris, Irix and other operating Unix systems.
+   CMUCL runs on X86, Sparc, Mips, Alpha, and other processors.
+
+SBCL (Steel Bank Common Lisp) 
+
+   Available from SourceForge. 
+   Support for both x86 and ADM64 versions.
+
+Allegro Common Lisp version 6.0 or newer
+
+   Available from www.franz.com
+
+   ACL runs on Linux, Solaris, WinNT and other (?) operating Unix systems.
+   ACL runs on X86, Sparc, and other processors.
+
+FREEDIUS is currently known to run with:
+
+   CMUCL/X86
+   CMUCL/PPC
+   ACL/X86
+   SBCL/X86
+   SBCL/PPC
+   SBCL/AMD64
+
+The FREEDIUS C libraries can also be compiled under
+   Mac OS X x86 or ppc
+   Windows XP
+
+
+Sun Jun 28 2009 LHQ:  
+  I am working on automatic cmake invocation to build the libraries.
+  When complete, the following instructions will no longer be needed.
+
+
+
+
+INSTALLING linux:  ALLEGRO 
+
+setenv FREEDIUS_ARCH $FREEDIUS/arch/linux-acl
+mkdir -p $FREEDIUS_ARCH/c
+cd $FREEDIUS_ARCH/c
+mkdir ../lisp  # $FREEDIUS_ARCH/lisp/config.lisp
+cmake -DF3D=$FREEDIUS -DINSTALL_PREFIX=$FREEDIUS_ARCH -DCMAKE_VERBOSE_MAKEFILE=1 -DLISP=allegro $FREEDIUS/c
+make install
+
+INSTALLING linux:  CMUCL
+
+setenv FREEDIUS_ARCH $FREEDIUS/arch/linux-cmucl
+mkdir -p $FREEDIUS_ARCH/c
+cd $FREEDIUS_ARCH/c
+mkdir ../lisp  # $FREEDIUS_ARCH/lisp/config.lisp
+cmake -DNOLINK_TCL_TK=1 -DF3D=$FREEDIUS -DINSTALL_PREFIX=$FREEDIUS_ARCH -DCMAKE_VERBOSE_MAKEFILE=1 -DLISP=cmucl $FREEDIUS/c
+make install
+
+INSTALLING linux:  SBCL (X86)
+	   
+setenv FREEDIUS_ARCH $FREEDIUS/arch/linux-sbcl32
+mkdir -p $FREEDIUS_ARCH/c
+cd $FREEDIUS_ARCH/c
+mkdir ../lisp  # $FREEDIUS_ARCH/lisp/config.lisp
+cmake -DF3D=$FREEDIUS -DINSTALL_PREFIX=$FREEDIUS_ARCH -DCMAKE_VERBOSE_MAKEFILE=1 -DLISP=sbcl32 $FREEDIUS/c
+make install
+
+INSTALLING linux:  SBCL (X86-64)
+
+setenv FREEDIUS_ARCH $FREEDIUS/arch/linux-sbcl64
+mkdir -p $FREEDIUS_ARCH/c
+cd $FREEDIUS_ARCH/c
+mkdir ../lisp  # $FREEDIUS_ARCH/lisp/config.lisp
+cmake -DNOLINK_TCL_TK=1 -DF3D=$FREEDIUS -DINSTALL_PREFIX=$FREEDIUS_ARCH -DCMAKE_VERBOSE_MAKEFILE=1 -DLISP=sbcl64 $FREEDIUS/c
+make install
+

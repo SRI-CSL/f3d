@@ -1,0 +1,105 @@
+
+# ______________________________________________________________________________________________________
+# Qcme specifies any application running under the :TK subsystem with default tk::*default-tk-init-argv*
+
+Qcme*background: gray70
+#Qcme*selectColor: grey55
+Qcme*Radiobutton.selectColor: grey90
+#Qcme*Checkbutton.selectColor: grey90
+Qcme*selectColor: PaleGreen1
+Qcme*activeBackground: yellow
+Qcme*MenuButton.activeBackground: yellow
+
+Qcme.doc_widget_frame*doc_widget*font: -family Courier -size 12
+Qcme.doc_widget_frame.doc_widget.background: #fab2be
+
+#Qcme*Button.padX: 4
+#Qcme*Button.padY: 2
+
+# ________________________________________________________________________________________
+# Qcme.Cvv specifies the defaults for any CVV-PANEL with default :RESOURCE-NAME (Tk class)
+
+Qcme.Cvv*font: -family Courier -size 14
+Qcme.Cvv*Radiobutton.selectColor: grey90
+Qcme.Cvv*selectColor: #d4d466
+Qcme.Cvv*Scrollbar.troughColor: gray70
+
+Qcme.Cvv*borderWidth: 2
+Qcme.Cvv*Entry.highlightThickness: 0
+Qcme.Cvv*Text.highlightThickness: 0
+Qcme.Cvv*Button.highlightThickness: 0
+Qcme.Cvv*Checkbutton.highlightThickness: 0
+Qcme.Cvv*Menubutton.highlightThickness: 0
+Qcme.Cvv*Radiobutton.highlightThickness: 0
+Qcme.Cvv*Listbox.highlightThickness: 0
+Qcme.Cvv*padX: 2
+Qcme.Cvv*padY: 2
+Qcme.Cvv*Frame.borderWidth: 0
+Qcme.Cvv*Frame.padY: 0
+
+# ____________________________________________________________________________
+# Qcme.Obj specifies the defaults for most of the panels used in FREEDIUS
+
+# Use the default font unless one of the next is enabled
+#Qcme.Obj*font: -family Courier -size 8
+#Qcme.Obj*font: -family Courier -size 10
+
+# Background color for FREEDIUS panels
+# disabled Sat Mar 31 2007
+Qcme.Obj*background: #accaae
+#Qcme.Obj*background: gray70
+
+#Qcme.Obj*selectColor: grey55
+#Qcme.Obj*selectColor: PaleGreen1
+Qcme.Obj*selectColor: #d4d466
+#Qcme.Obj*selectColor: grey60
+Qcme.Obj*Radiobutton.selectColor: grey90
+#Qcme.Obj*Checkbutton.selectColor: grey90
+Qcme.Obj*Scrollbar.troughColor: gray70
+
+Qcme.Obj*borderWidth: 2
+#Qcme.Obj*highlightThickness: 0
+Qcme.Obj*Entry.highlightThickness: 0
+Qcme.Obj*Text.highlightThickness: 0
+Qcme.Obj*Button.highlightThickness: 0
+Qcme.Obj*Checkbutton.highlightThickness: 0
+Qcme.Obj*Menubutton.highlightThickness: 0
+Qcme.Obj*Radiobutton.highlightThickness: 0
+Qcme.Obj*Listbox.highlightThickness: 0
+Qcme.Obj*padX: 2
+Qcme.Obj*padY: 2
+Qcme.Obj*Frame.borderWidth: 0
+Qcme.Obj*Frame.padY: 0
+#Qcme.Obj.borderWidth: 2
+
+# ____________________________________________________________________________
+# Qcme.ControlPanel specifies defaults for the FREEDIUS Control Panel
+
+#Qcme.ControlPanel*background: #accaae
+#Qcme.ControlPanel*background: PaleGoldenrod
+#Qcme.ControlPanel*background: lavender
+Qcme.ControlPanel*background: LightSkyBlue3
+
+#Qcme.ControlPanel*padX: 0
+#Qcme.ControlPanel*padY: 0
+Qcme.ControlPanel*mb*highlightThickness: 0
+Qcme.ControlPanel*mb*borderWidth: 0
+
+# ____________________________________________________________________________
+# Qcme.Obj*fsfrm specifies defaults for the Feature Set Configuration Panels
+
+Qcme.Obj*fsfrm*font: -family Helvetica -size 8 -weight bold
+
+
+# ____________________________________________________________________________
+# Qcme.Elt specifies defaults for various panels in freedius-systems used by Connolly
+# Move this to a different app-defaults file.
+
+#Qcme.Elt*background: #accaae
+
+Qcme.Elt*padX: 0
+Qcme.Elt*padY: 0
+Qcme.Elt*panel_controls*borderWidth: 0
+Qcme.Elt*panel_controls*highlightThickness: 0
+Qcme.Elt*panel_controls*padX: 4
+Qcme.Elt*panel_controls*padY: 2

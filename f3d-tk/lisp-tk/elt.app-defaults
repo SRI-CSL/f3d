@@ -1,0 +1,56 @@
+# This file contains most of the app-defaults used by FREEDIUS.
+# This file should probably move to $FREEDIUS_ARCH/lisp/FREEDIUS.app-defaults.
+
+Qcme*background: gray70
+#Qcme*selectColor: grey55
+Qcme*Radiobutton.selectColor: grey90
+#Qcme*Checkbutton.selectColor: grey90
+Qcme*selectColor: PaleGreen1
+Qcme*activeBackground: yellow
+Qcme*MenuButton.activeBackground: yellow
+
+Qcme.Elt*padX: 0
+Qcme.Elt*padY: 0
+
+Qcme.Elt*panel_controls*borderWidth: 0
+Qcme.Elt*panel_controls*highlightThickness: 0
+Qcme.Elt*panel_controls*padX: 4
+Qcme.Elt*panel_controls*padY: 2
+#Qcme.Elt*background: #accaae
+#Qcme*Button.padX: 4
+#Qcme*Button.padY: 2
+
+#Qcme.Cme*padX: 0
+#Qcme.Cme*padY: 0
+Qcme.Cme*mb*highlightThickness: 0
+Qcme.Cme*mb*borderWidth: 0
+#Qcme.Cme*background: #accaae
+#Qcme.Cme*background: PaleGoldenrod
+#Qcme.Cme*background: lavender
+Qcme.Cme*background: LightSkyBlue3
+
+
+Qcme.Cvv*font: -family Courier -size 14
+Qcme.Cvv*Radiobutton.selectColor: grey90
+Qcme.Cvv*selectColor: #d4d466
+Qcme.Cvv*borderWidth: 2
+Qcme.Cvv*Entry.highlightThickness: 0
+Qcme.Cvv*Text.highlightThickness: 0
+Qcme.Cvv*Button.highlightThickness: 0
+Qcme.Cvv*Checkbutton.highlightThickness: 0
+Qcme.Cvv*Menubutton.highlightThickness: 0
+Qcme.Cvv*Radiobutton.highlightThickness: 0
+Qcme.Cvv*Listbox.highlightThickness: 0
+Qcme.Cvv*Scrollbar.troughColor: gray70
+Qcme.Cvv*padX: 2
+Qcme.Cvv*padY: 2
+Qcme.Cvv*Frame.borderWidth: 0
+Qcme.Cvv*Frame.padY: 0
+
+
+Qcme.doc_widget_frame*doc_widget*font: -family Courier -size 14
+!Qcme.doc_widget_frame*doc_widget*background: LightPink
+Qcme.doc_widget_frame.doc_widget.background: #fab2be
+!Qcme.doc_widget_frame*background: red
+
+
