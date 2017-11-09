@@ -17,7 +17,8 @@ The code is largely written in Lisp, with a core set of C++ libraries.
 Supported Lisps are Allegro, CMUCL, and SBCL.  Rendering is
 implemented using OpenGL.  The C++ code should automatically build on
 loading into Lisp.  The code has been build and run on Linux, Windows
-7, and Mac OS X.
+7, and Mac OS X.  On the Mac, you're best off using X11 as opposed to
+Cocoa.
 
 # Installing:
 
@@ -57,6 +58,22 @@ and SLIME (https://common-lisp.net/project/slime/) to interact with f3d.
 
 CMake (https://cmake.org/) is used to build the C libraries, so be
 sure to download that.
+
+If quicklisp is installed, you can start Lisp and type the following
+at the '*' prompt (or in the *inferior-lisp* buffer, if using Emacs):
+
+(ql:quickload :f3d-tk)
+
+This is how you load the full f3d system.  Upon the first loading, it
+will compile itself.  KNOWN BUG: If you're using SLIME, do NOT start
+f3d from the SLIME window (the '>' prompt) or it will hang.
+
+Once it has been loaded, at the '*' prompt (or in the *inferior-lisp*
+window), do this:
+
+(start-cme)
+
+and you should see a blue menu.
 
 
 # Running
