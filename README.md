@@ -26,10 +26,15 @@ most of these are available through apt-get.  On Macs, try 'brew' or
 the websites:
 
 o Quicklisp at http://www.quicklisp.org/
+
 o Steel Bank Common Lisp ver. 1.3.8 at https://sourceforge.net/projects/sbcl/files/sbcl/
+
 o CMake at https://cmake.org/
+
 o Emacs at https://www.gnu.org/software/emacs/
+
 o SLIME at https://common-lisp.net/project/slime/
+
 o Tcl/Tk 8.6
 
 
