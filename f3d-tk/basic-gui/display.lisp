@@ -738,7 +738,8 @@ If the backing-store is complete, then we can do (redisplay view :FROM-BACKING-S
 	   (unless (immediate-render-p object-set)
              ;; (format t "display-object-set glCallList ~a ~a~%" view object-set)
 	     (glFlush) (handle_gl_errors "display-object-set 0")
-	     (glCallList (build-display-list object-set exclude-objects view))
+	     (ignore-errors
+	       (glCallList (build-display-list object-set exclude-objects view)))
 	     (glFlush) (handle_gl_errors "display-object-set 1")))
 	  )))))
 
@@ -1254,6 +1255,7 @@ Need to make sure pages pools and texture pools are big enough
 	   (format t "~s~%" cls)
       finally (return l))
 |#
+
 
 
 

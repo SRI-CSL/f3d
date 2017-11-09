@@ -6,9 +6,9 @@ else ( WIN32 AND (NOT MINGW) )
 set(libname freedius)
 endif ( WIN32 AND (NOT MINGW) )
 
-#if ( WIN32 )
+if ( WIN32 )
 message( "Compiling " ${libname} " for Windows." )
-#endif ( WIN32 )
+endif ( WIN32 )
 
 project(${libname})
 

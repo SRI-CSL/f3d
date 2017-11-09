@@ -290,7 +290,11 @@ Here "TOP" refers to the face which defined the cross section of the extrusion.
 
 		
 (defparameter *gl-shading-enabled* nil)
-(defparameter *gl-shading-always-enabled* t)
+;;;
+;;; As of 11/08/2017, setting this to T causes divide by zero in
+;;; gluTessEndPolygon:
+;;;
+(defparameter *gl-shading-always-enabled* nil)
 
 #|
 (setq *gl-shading-always-enabled* nil)

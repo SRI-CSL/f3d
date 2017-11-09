@@ -15,6 +15,12 @@ respects, may still offer something novel.
 
 The code is largely written in Lisp, with a core set of C++ libraries.
 Supported Lisps are Allegro, CMUCL, and SBCL.  Rendering is
-implemented using OpenGL.  At one point, the code could be built under
-Linux, MacOSX, and Windows.  Some bit rot has set in, so this
-paragraph will be updated when we're able to clean things up.
+implemented using OpenGL.  The C++ code should automatically build on
+loading into Lisp.  The code has been build and run on Linux, Windows
+7, and Mac OS X.
+
+# Installing:
+
+f3d is quicklisp-compatible (see http://www.quicklisp.org/).  Once you
+have a quicklisp/local-projects directory, you can git clone f3d.git
+there.
