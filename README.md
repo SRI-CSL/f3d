@@ -21,6 +21,40 @@ loading into Lisp.  The code has been build and run on Linux, Windows
 
 # Installing:
 
+Checklist - Download these and you should be ready to go - on Linux,
+most of these are available through apt-get.  On Macs, try 'brew' or
+the websites:
+
+o Quicklisp at http://www.quicklisp.org/
+o Steel Bank Common Lisp ver. 1.3.8 at https://sourceforge.net/projects/sbcl/files/sbcl/
+o CMake at https://cmake.org/
+o Emacs at https://www.gnu.org/software/emacs/
+o SLIME at https://common-lisp.net/project/slime/
+o Tcl/Tk 8.6
+
+
 f3d is quicklisp-compatible (see http://www.quicklisp.org/).  Once you
 have a quicklisp/local-projects directory, you can git clone f3d.git
 there.
+
+SBCL (Steel Bank Common Lisp at http://www.sbcl.org/) is an
+open-source Common Lisp that is supported on all the platforms that
+f3d runs on.  As of this writing, you should use version 1.3.8 for
+maximum compatibility with other things.  In theory, f3d will also
+work on Allegro Common Lisp and CMU Common Lisp, but these haven't been
+tested in a while.
+
+Dependencies: f3d depends on OpenGL and Tcl/Tk for graphics and GUI
+operations.  Tcl/Tk version 8.6 is probably best.
+
+You are encouraged to use Emacs (https://www.gnu.org/software/emacs/)
+and SLIME (https://common-lisp.net/project/slime/) to interact with f3d.
+
+CMake (https://cmake.org/) is used to build the C libraries, so be
+sure to download that.
+
+
+# Running
+
+The core C++ libraries for f3d are written portably, so they should
+compile on each of Windows, Linux, and MacOSX.  
