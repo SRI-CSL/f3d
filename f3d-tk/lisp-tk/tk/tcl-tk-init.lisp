@@ -46,6 +46,16 @@
 ;;  (tcl-eval "console" "show")
   )
 
+#+macosx
+(defun maybe-start-x11 (interp)
+  (format t "~%Attempting to start X11")
+  (lx::run-program
+   "/Applications/Utilities/XQuartz.app/Contents/MacOS/X11"
+   nil
+   :wait nil)
+  (sleep 1)
+  (Tcl_Init interp))
+
 ;;;
 ;;; If the DISPLAY environment variable is incorrect (possible on
 ;;; MacOSX), this throws an error.  It would be nice to allow a
@@ -59,7 +69,9 @@
     (when *tk-verbose* 
       (format t "tk-init-main-window (Tcl_Init ~x) returns ~a.~%" interp status1) (force-output))
     (when (eql status1 TCL_ERROR)
-      (error "tcl_init error: ~s~%" (interp-result interp)))
+      #+macosx (setq status1 (maybe-start-x11 interp))
+      #-macosx (error "tcl_init error: ~s~%" (interp-result interp))
+      )
     (when argv (set-tk-argv argv))
     ;;(format t "~%set-tk-argv done.")
 
