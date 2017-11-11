@@ -36,7 +36,7 @@ o Emacs at https://www.gnu.org/software/emacs/
 
 o SLIME at https://common-lisp.net/project/slime/
 
-o Tcl/Tk 8.6
+o Tcl/Tk 8.6 (be sure to get the development versions, e.g. if you are using debian)
 
 
 f3d is quicklisp-compatible (see http://www.quicklisp.org/).  Once you
