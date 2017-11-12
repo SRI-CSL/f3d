@@ -84,4 +84,5 @@ compile on each of Windows, Linux, and MacOSX.
 # Site Models
 
 To exercise f3d, you should download at least one site model.  At
-least one sample site models can be found at https://github.com/SRI-CSL/radius
+least one sample site model can be found at
+https://github.com/SRI-CSL/radius
