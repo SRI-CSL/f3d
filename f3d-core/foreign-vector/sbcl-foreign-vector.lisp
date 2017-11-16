@@ -1,5 +1,6 @@
 (in-package :qffi)
 
+
 #|
 On x86 (32 bit), SBCL arrays are the same as CMUCL arrays.  No change is required for the creation
 of foreign-vectors.
@@ -59,7 +60,8 @@ On AMD64 (aka x86-64) SBCL array headers are different.
 ;;; heap.  The only safe lisp values are those known to be in stationary areas.
 
 (eval-when (load eval compile)
-  
+
+
 (defun array-element-type-code-from-type-spec (type-spec)
   (sb-impl::%vector-widetag-and-n-bits type-spec)
   #+never(cadr (assoc type-spec *sv-type-code-alist* :test 'equal))

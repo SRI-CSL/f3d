@@ -588,6 +588,15 @@ Cannot be called from eval"))
 	(values (subseq string 0 c-pos) (subseq string (1+ c-pos)) c-pos)
 	(values string "" c-pos))))
 
+;;; Add a python-style split - splits along all occurrences of CHAR, not just the first.
+
+(defun pysplit (string char)
+  (multiple-value-bind (head tail where)
+      (split-string string char)
+    (if where
+        (cons head (split-string tail char))
+        (list head))))
+
 (defun parse-unix-search-path (pathstring &optional (separator-char #\:))
   (loop for (first-thing rest) = (multiple-value-list (split-string pathstring separator-char))
 	then (multiple-value-list (split-string rest separator-char))
