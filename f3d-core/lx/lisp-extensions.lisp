@@ -135,7 +135,25 @@
 
 #+sbcl
 (progn
-	
+
+
+(defun sbcl-version ()
+  (let ((vlist (st::pysplit (lisp-implementation-version) #\.)))
+    (loop for x in vlist collect (parse-integer x))))
+
+(defun sbcl-version>= (&rest args)
+  (let ((v (sbcl-version)))
+    (loop for x0 in v
+          as x1 in args
+          always (>= x0 x1))))
+
+  
+(defmacro %vector-widetag-and-n-bits (spec)
+  (if (sbcl-version>= 1 3 15)
+      `(sb-impl::%vector-widetag-and-n-bits-shift ,spec)
+      `(sb-impl::%vector-widetag-and-n-bits ,spec)))
+
+
 (defun string-append2 (s1 s2)
   (declare (type (simple-array character) s1 s2))
   (let* ((n1 (length s1))

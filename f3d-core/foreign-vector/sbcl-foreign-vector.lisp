@@ -55,6 +55,7 @@ On AMD64 (aka x86-64) SBCL array headers are different.
     (foreign_simple_vector :lisp))
 
 
+
 ;;; Lisp objects are problematic in foreign vectors because the lisp garbage
 ;;; collector ignores the contents of the vector, since it is not in the Lisp
 ;;; heap.  The only safe lisp values are those known to be in stationary areas.
@@ -63,7 +64,7 @@ On AMD64 (aka x86-64) SBCL array headers are different.
 
 
 (defun array-element-type-code-from-type-spec (type-spec)
-  (sb-impl::%vector-widetag-and-n-bits type-spec)
+  (lx::%vector-widetag-and-n-bits type-spec)
   #+never(cadr (assoc type-spec *sv-type-code-alist* :test 'equal))
   )
 

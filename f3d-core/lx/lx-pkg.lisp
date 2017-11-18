@@ -97,3 +97,9 @@
 	   )
   
   )
+
+#+sbcl
+(progn
+  ;; needed for sbcl >=1.3.15:
+  (unlock-package "SB-IMPL")
+  (unlock-package "SB-EXT"))

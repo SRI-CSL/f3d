@@ -594,7 +594,7 @@ Cannot be called from eval"))
   (multiple-value-bind (head tail where)
       (split-string string char)
     (if where
-        (cons head (split-string tail char))
+        (cons head (pysplit tail char))
         (list head))))
 
 (defun parse-unix-search-path (pathstring &optional (separator-char #\:))
